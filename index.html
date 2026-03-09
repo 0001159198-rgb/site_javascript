@@ -1,9 +1,13 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineShop</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -12,7 +16,6 @@
     <header>
         <h1>CineShop</h1>
         <p>A loja ideal para quem é fã de cinema</p>
-        <br>
 
         <nav>
             <ul>
@@ -26,22 +29,25 @@
     <!-- Conteúdo Principal -->
     <main id="inicio">
 
-        <!-- Seção 1 - Sobre a Empresa -->
+        <!-- Sobre -->
         <section>
             <h2>Sobre a CineShop</h2>
 
-            <p>A CineShop é uma empresa especializada em produtos e acessórios para amantes do cinema. Trabalhamos com itens exclusivos e colecionáveis.</p>
+            <p>A CineShop é uma empresa especializada em produtos e acessórios para amantes do cinema.</p>
 
-            <p>Nosso objetivo é proporcionar aos nossos clientes uma experiência única, oferecendo qualidade e variedade em nossos produtos.</p>
+            <p>Nosso objetivo é proporcionar aos nossos clientes uma experiência única.</p>
 
             <article>
                 <h3>Nossa Missão</h3>
-                <p>Levar a magia do cinema para dentro da casa de cada cliente, oferecendo produtos de alta qualidade e atendimento diferenciado.</p>
+                <p>Levar a magia do cinema para dentro da casa de cada cliente.</p>
             </article>
 
-            <img src="cineshop.png" 
-                 alt="Fachada da loja CineShop com a logo iluminada"
-                 width="600">
+            <!-- Imagem com interação -->
+            <img 
+            id="imagemCinema"
+            src="cineshop.png"
+            alt="Logo da loja CineShop"
+            width="600">
         </section>
 
         <!-- Serviços -->
@@ -68,17 +74,20 @@
                         <th>Preço</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
                         <td>Camiseta Geek</td>
                         <td>Camiseta temática de filmes</td>
                         <td>R$ 59,90</td>
                     </tr>
+
                     <tr>
                         <td>Poster Decorativo</td>
                         <td>Poster de filmes clássicos</td>
                         <td>R$ 39,90</td>
                     </tr>
+
                     <tr>
                         <td>Caneca Personalizada</td>
                         <td>Caneca temática exclusiva</td>
@@ -93,37 +102,90 @@
             <h2>Como Funcionavam as Locadoras de Filmes</h2>
 
             <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/9Wc7vPzR5fI"
-                title="Como funcionavam as locadoras de filmes"
-                frameborder="0"
-                allowfullscreen>
+            src="https://www.youtube.com/embed/9Wc7vPzR5fI"
+            title="Como funcionavam as locadoras de filmes"
+            frameborder="0"
+            allowfullscreen>
             </iframe>
+        </section>
+
+        <!-- Interatividade JavaScript -->
+        <section>
+
+            <h2>Interatividade do Site</h2>
+
+            <button id="btnBoasVindas">
+                Clique para receber uma mensagem
+            </button>
+
+            <p id="mensagem"></p>
+
+            <br><br>
+
+            <p id="textoSite">
+                Este é um site sobre tecnologia.
+            </p>
+
+            <button id="btnAlterarTexto">
+                Alterar Texto
+            </button>
+
+            <br><br>
+
+            <button id="btnCor">
+                Alterar cor da seção
+            </button>
+
+            <br><br>
+
+            <button id="btnMostrar">
+                Mostrar mais informações
+            </button>
+
+            <p id="infoExtra" style="display:none;">
+                A CineShop foi criada para fãs de cinema que adoram colecionáveis e produtos exclusivos.
+            </p>
+
+            <br><br>
+
+            <button id="btnDarkMode">
+                Modo Escuro
+            </button>
+
+            <br><br>
+
+            <button id="contadorBtn">
+                Clique aqui
+            </button>
+
+            <p>
+                Cliques: <span id="contador">0</span>
+            </p>
+
         </section>
 
         <!-- Contato -->
         <section id="contato">
+
             <h2>Fale Conosco</h2>
 
             <form>
+
                 <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome" required><br><br>
+                <input type="text" id="nome" name="nome"><br><br>
 
                 <label for="email">E-mail:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email" name="email"><br><br>
 
                 <label for="telefone">Telefone:</label><br>
                 <input type="tel" id="telefone" name="telefone"><br><br>
 
-                <label for="mensagem">Mensagem:</label><br>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea><br><br>
+                <label for="mensagemForm">Mensagem:</label><br>
+                <textarea id="mensagemForm" name="mensagemForm"></textarea><br><br>
 
                 <button type="submit">Enviar</button>
-            </form>
 
-            <p>
-                Acompanhe também nosso parceiro oficial:
-                <a href="https://www.imdb.com" target="_blank">IMDb</a>
-            </p>
+            </form>
 
         </section>
 
@@ -131,11 +193,17 @@
 
     <!-- Rodapé -->
     <footer>
+
         <p>Telefone: (11) 99999-9999</p>
         <p>Email: contato@cineshop.com</p>
-        <p>Endereço: Rua do Cinema, 123 - Belo Horizonte, MG</p>
-        <p>&copy; 2026 CineShop - Todos os direitos reservados.</p>
+        <p>Endereço: Rua do Cinema, 123 - Belo Horizonte</p>
+        <p>&copy; 2026 CineShop</p>
+
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
+```
